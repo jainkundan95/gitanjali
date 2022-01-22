@@ -1,0 +1,33 @@
+{
+  "kind": "collectionType",
+  "collectionName": "lyrics",
+  "info": {
+    "singularName": "lyric",
+    "pluralName": "lyrics",
+    "displayName": "Lyric"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "track": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::track.track",
+      "inversedBy": "lyric"
+    },
+    "Language": {
+      "type": "enumeration",
+      "enum": [
+        "English",
+        "Hindi",
+        "Kannada",
+        "Malyali"
+      ]
+    },
+    "LyricsContent": {
+      "type": "richtext"
+    }
+  }
+}

@@ -1,0 +1,36 @@
+{
+  "kind": "collectionType",
+  "collectionName": "artists",
+  "info": {
+    "singularName": "artist",
+    "pluralName": "artists",
+    "displayName": "Artist"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "ArtistName": {
+      "type": "string"
+    },
+    "ArtistDescription": {
+      "type": "text"
+    },
+    "ArtistCoverImage": {
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos"
+      ],
+      "type": "media",
+      "multiple": false
+    },
+    "tracks": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::track.track",
+      "inversedBy": "artists"
+    }
+  }
+}
