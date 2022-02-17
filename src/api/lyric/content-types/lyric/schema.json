@@ -11,12 +11,6 @@
   },
   "pluginOptions": {},
   "attributes": {
-    "track": {
-      "type": "relation",
-      "relation": "oneToOne",
-      "target": "api::track.track",
-      "inversedBy": "lyric"
-    },
     "Language": {
       "type": "enumeration",
       "enum": [
@@ -28,6 +22,12 @@
     },
     "LyricsContent": {
       "type": "richtext"
+    },
+    "track": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::track.track",
+      "inversedBy": "lyrics"
     }
   }
 }

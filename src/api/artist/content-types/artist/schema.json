@@ -30,7 +30,7 @@
       "type": "relation",
       "relation": "manyToMany",
       "target": "api::track.track",
-      "inversedBy": "artists"
+      "mappedBy": "artists"
     }
   }
 }

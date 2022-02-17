@@ -54,11 +54,11 @@
       "target": "api::artist.artist",
       "inversedBy": "tracks"
     },
-    "lyric": {
+    "lyrics": {
       "type": "relation",
-      "relation": "oneToOne",
+      "relation": "oneToMany",
       "target": "api::lyric.lyric",
-      "inversedBy": "track"
+      "mappedBy": "track"
     },
     "playlists": {
       "type": "relation",
